@@ -7,35 +7,30 @@ def subtract(a,b):
 def multiply(a,b):
     return a * b
 
-def divide(a,b):
-    return a / y
+def division(a,b):
+    return a / b
 
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+print("Select from the following operations :")
+print("1 . Addition")
+print("2 . Subtraction")
+print("3 . Multiply")
+print("4 . Division")
 
-while True:
-        select = input("Select(1/2/3/4): ")
-        if select in ('1', '2', '3', '4'):
-            number1 = float(input("Enter first number: "))
-            number2 = float(input("Enter second number: "))
+user_choice = int(input("select 1,2,3,4"))
+a = int(input("Enter first number"))
+b = int(input("Enter second number"))
 
-        if select == '1':
-            print(number1, "+", number2, "=", add(number1, number2))
+if user_choice == 1:
+    print(add(a,b))
 
-        elif select == '2':
-            print(number1, "-", number2, "=", subtract(number1, number2))
+elif user_choice == 2:
 
-        elif select == '3':
-            print(number1, "*", number2, "=", multiply(number1, number2))
+    print(subtract(a,b))
 
-        elif select == '4':
-            print(number1, "/", number2, "=", divide(number1, number2))
+elif user_choice == 3:
 
-        next_calculation = input("Next calculation? (yes/no): ")
-        if next_calculation == "no":
-            break
+    print(multiply(a,b))
 
+elif user_choice == 4:
 
+    print(division(a,b))

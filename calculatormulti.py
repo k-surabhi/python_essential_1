@@ -1,53 +1,55 @@
-def addition(*args):
-    Number_list = []
-    for i in inputList:
-        z = int(i)
-        Number_list.append(z)
-    Add = sum(Number_list)
-    return Add
+def add(n):
+    x = 0
+    for i in n:
+        x = x + int(i)
+    return x
 
-def subtraction(*args):
-    Number_list = []
-    for i in inputList:
-        z = int(i)
-        Number_list.append(z)
-    Subtract = Number_list[0] - sum(Number_list[1:])
-    return Subtract
+def subtract(n):
+    x = int(n[0])
+    for i in n[1:]:
+        x = x - int(i)
+    return x
 
-def multiplication(*args):
-    return
+def multiply(n):
+    x = int(n[0])
+    for i in n[1:]:
+        x = x * int(i)
+    return x
 
-def division(*args):
-    return
-
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+def division(n):
+    x = int(n[0])
+    for i in n[1:]:
+        x = x / int(i)
+    return x
 
 while True:
-        select = input("Select(1/2/3/4): ")
-        if select in ('1', '2', '3', '4'):
-            print("Please enter your values: ")
-            user_input = input().split()
 
-        if select == '1':
-            Output = addition(user_input)
-            print("The sum of your inputs is: ", Output)
+    print("Select from the following operations :")
+    print("1 . Addition")
+    print("2 . Subtraction")
+    print("3 . Multiply")
+    print("4 . Division")
 
-        elif select == '2':
-            Output = subtraction(user_input)
-            print("The difference of you inputs is: ", Output)
+    user_choice = int(input("select 1,2,3,4"))
+    a = input("Enter value").split(" ")
 
-        elif select == '3':
-            Output = multiplication(user_input)
-            print("The product of your inputs is: ", Output)
 
-        elif select == '4':
-            Output = division(user_input)
-            print("The quotient of your inputs is: ", Output)
+    if user_choice == 1:
+        print(add(a))
 
-        next_calculation = input("Next calculation? (yes/no): ")
-        if next_calculation == "no":
-            break
+    elif user_choice == 2:
+
+        print(subtract(a))
+
+    elif user_choice == 3:
+
+        print(multiply(a))
+
+    elif user_choice == 4:
+
+        print(division(a))
+
+
+    next_calculation = input("Next calculation? (yes/no): ")
+    if next_calculation == "no":
+        break
