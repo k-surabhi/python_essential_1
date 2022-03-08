@@ -1,6 +1,7 @@
 fname_arr = []
 lname_arr = []
 Age_arr = []
+sum = 0
 
 
 
@@ -24,10 +25,12 @@ for index in range(number_of_employee):
 
 print("First name\t Last Name\t Age")
 
+for i in range(number_of_employee):
+    print(f"{fname_arr[i].capitalize()}  \t"+ f" {lname_arr[i].capitalize()}  \t"+ f" {Age_arr[i]}  \t")
+
+
 for index in range(number_of_employee):
-    print(f"{fname_arr.pop(index).capitalize()}  \t"+ f" {lname_arr.pop(index).capitalize()}  \t"+ f" {Age_arr.pop(index)}  \t")
+    sum = Age_arr[index]+sum
 
-
-
-
-
+if sum > 500:
+    print(f"Sum is {sum}")
