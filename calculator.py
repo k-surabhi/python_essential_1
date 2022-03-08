@@ -38,4 +38,4 @@ while True:
         if next_calculation == "no":
             break
 
-    
+
