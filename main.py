@@ -34,3 +34,4 @@ for index in range(number_of_employee):
 
 if sum > 500:
     print(f"Sum is {sum}")
+
